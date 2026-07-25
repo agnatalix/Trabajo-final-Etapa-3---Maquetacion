@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Útil | Zaguates</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================================================
+         CABECERA CON MENÚ HAMBURGUESA
+         ========================================================= -->
+    <header class="cabecera">
+        <div class="contenedor cabecera-interna">
+            <a class="logo" href="index.html">
+                <img src="img/Zaguates_logo.svg" alt="Logo Zaguates" width="64" height="48">
+            </a>
+
+            <!-- Checkbox oculto que hace funcionar el menú -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            
+            <!-- El icono de la hamburguesa -->
+            <label for="menu-toggle" class="menu-label">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <!-- Navegación que se oculta en celular y se muestra en PC -->
+            <nav class="navegacion" aria-label="Menú principal">
+                <a href="transita.html">Transitá</a>
+                <a href="animales.html">Apadriná</a>
+                <a href="equipos.html">Equipos</a>
+                <a href="index.html#tienda">Tienda</a>
+                <a href="info.html">Info útil</a>
+                <a href="/dona.html" class="btn-hueso btn-hueso--verde">
+                    <span>DONÁ AHORA</span>
+                </a>
+                <a href="#" class="btn-hueso btn-hueso--rosa">
+                    <span>ADOPTÁ</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="lista-hero">
+            <div class="contenedor">
+                <a href="index.html" class="volver">← Inicio</a>
+                <span class="eyebrow">Recursos</span>
+                <h1>Info Útil</h1>
+                <hr class="divisor">
+                <p>Todo lo que necesitás saber para proteger animales, conocer tus derechos y ser parte del cambio.</p>
+            </div>
+            <div class="lista-hero__deco">§</div>
+        </section>
+
+        <section class="seccion contenedor">
+
+            <article class="info-seccion">
+                <div class="info-cabecera">
+                    <div class="info-cabecera__icono info-cabecera__icono--gris">⚖️</div>
+                    <div>
+                        <span class="eyebrow">Marco Legal</span>
+                        <h2>Leyes que los protegen</h2>
+                    </div>
+                </div>
+
+                <div class="ley-tarjeta">
+                    <div class="ley-tarjeta__badge">
+                        <strong>Ley 14.346</strong>
+                        <span>1954</span>
+                    </div>
+                    <div>
+                        <h3>Ley de Malos Tratos y Actos de Crueldad</h3>
+                        <p>Ley nacional argentina que penaliza el maltrato, la crueldad y el abandono de animales.
+                            Establece penas de prisión de 15 días a 1 año.</p>
+                        <a href="#" class="ley-link">↗ Ver texto completo</a>
+                    </div>
+                </div>
+
+                <div class="ley-tarjeta">
+                    <div class="ley-tarjeta__badge">
+                        <strong>Ley 27.330</strong>
+                        <span>2016</span>
+                    </div>
+                    <div>
+                        <h3>Modificación al Código Penal — Agravante</h3>
+                        <p>Agrava las penas de la Ley 14.346. Incorpora al Código Penal nacional penas de hasta 2 años
+                            de prisión por maltrato animal.</p>
+                        <a href="#" class="ley-link">↗ Ver texto completo</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="info-seccion">
+                <div class="info-cabecera">
+                    <div class="info-cabecera__icono info-cabecera__icono--rojo">⚠️</div>
+                    <div>
+                        <span class="eyebrow">Maltrato Animal</span>
+                        <h2>¿Cómo denunciar?</h2>
+                    </div>
+                </div>
+
+                <div class="alerta-banner">
+                    <strong>⚠️ Peligro inmediato:</strong> Llamá al 911. Para maltrato no urgente, usá los canales de
+                    abajo y documentá con fotos o videos antes.
+                </div>
+
+                <div class="grilla-denuncias">
+                    <div class="denuncia-tarjeta">
+                        <span>📞</span>
+                        <h3>Policía Federal / 911</h3>
+                        <span class="tel">911</span>
+                        <p>Para situaciones de peligro inmediato o maltrato en curso. Disponible las 24 hs.</p>
+                        <button class="btn-rojo">Llamar al 911</button>
+                    </div>
+                    <div class="denuncia-tarjeta">
+                        <span>🏢</span>
+                        <h3>Fiscalía CABA</h3>
+                        <span class="tel">0800-333-3468</span>
+                        <p>Unidad Fiscal Especializada en Materia Ambiental (UFEMA).</p>
+                        <button class="btn btn-oscuro">Llamar</button>
+                    </div>
+                    <div class="denuncia-tarjeta">
+                        <span>📱</span>
+                        <h3>Línea 147 — GCBA</h3>
+                        <span class="tel">147</span>
+                        <p>Línea gratuita del Gobierno de la Ciudad para denuncias de maltrato.</p>
+                        <button class="btn-rojo">Llamar al 147</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="info-seccion">
+                <div class="info-cabecera">
+                    <div class="info-cabecera__icono info-cabecera__icono--rojo">🩸</div>
+                    <div>
+                        <span class="eyebrow">Banco de Sangre Animal</span>
+                        <h2>Donación de sangre</h2>
+                    </div>
+                </div>
+
+                <div class="sangre-caja">
+                    <strong>¿Quién puede donar?</strong>
+                    <ul class="sangre-lista">
+                        <li>Perros: 1-8 años, +25 kg, vacunados</li>
+                        <li>Gatos: 1-6 años, +4 kg, buen estado de salud</li>
+                        <li>Sin enfermedades crónicas ni transfusiones previas</li>
+                        <li>El procedimiento dura 15 min y no causa dolor</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="turno-fila">
+                        <div>
+                            <strong>Sábado 28 de junio, 2026</strong>
+                            <p>9:00 — 14:00 hs - Parque Rivadavia, Caballito, CABA</p>
+                        </div>
+                        <div>
+                            <span>40 cupos</span>
+                            <button class="btn-rojo">Reservar</button>
+                        </div>
+                    </div>
+                    <div class="turno-fila">
+                        <div>
+                            <strong>Sábado 12 de julio, 2026</strong>
+                            <p>10:00 — 13:00 hs - Refugio Zaguates, Palermo, CABA</p>
+                        </div>
+                        <div>
+                            <span>25 cupos</span>
+                            <button class="btn-rojo">Reservar</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="info-seccion">
+                <div class="info-cabecera">
+                    <div class="info-cabecera__icono info-cabecera__icono--verde">💬</div>
+                    <div>
+                        <span class="eyebrow">Comunidad</span>
+                        <h2>Grupos de WhatsApp</h2>
+                    </div>
+                </div>
+
+                <div class="grilla-whatsapp">
+                    <div class="wa-tarjeta">
+                        <div>
+
+                            <div>
+                                <strong>Adopciones CR</strong>
+                                <span>1,248+ miembros</span>
+                            </div>
+                        </div>
+                        <p>Fichas de animales disponibles. ¡Compartí y ayudá!</p>
+                        <a class="btn-unirme" href="#">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z" />
+                            </svg>
+                            Unirme
+                        </a>
+                    </div>
+
+                    <div class="wa-tarjeta">
+                        <div>
+
+                            <div>
+                                <strong>Voluntarios</strong>
+                                <span>350+ miembros</span>
+                            </div>
+                        </div>
+                        <p>Coordinación de jornadas, paseos y eventos.</p>
+                        <a class="btn-unirme" href="#">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z" />
+                            </svg>
+                            Unirme
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+<footer class="pie">
+        <div class="contenedor">
+
+            <div class="pie-grid">
+
+                <div class="pie-sobre">
+                    <a class="logo" href="index.html">
+                        <img src="img/ZaguatesLogo_BLanco.svg" alt="Logo Zaguates" width="100" height="100">
+                       
+                    </a>
+                    <p>
+                        ONG sin fines de lucro con sede en Buenos Aires. Rescatamos y
+                        damos en adopción animales desde 2010.
+                    </p>
+                </div>
+
+                <div class="pie-columna">
+                    <h3>Navegación</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="animales.html">Apadriná</a></li>
+                        <li><a href="equipos.html">Equipos</a></li>
+                        <li><a href="index.html#contacto">Info Útil</a></li>
+                    </ul>
+                </div>
+
+                <div class="pie-columna">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Aviso legal</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+
+               <div class="grupo-botones" style="flex-direction: column;">
+                <a href="#" class="btn-hueso btn-hueso--verde" style=" height: 4rem">
+                    <span>DONÁ AHORA</span>
+                </a>
+                <a href="#" class="btn-hueso btn-hueso--rosa" style=" height: 4rem">
+                    <span>ADOPTÁ</span>
+                </a>
+            </div>
+        </div>
+
+            </div>
+
+            <div class="pie-final">
+                © 2026 Zaguates · Buenos Aires, Argentina · Todos los derechos reservados.
+                Hecho con amor por quienes aman a los animales 🐾
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
