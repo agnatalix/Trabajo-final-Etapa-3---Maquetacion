@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitá | Zaguates</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <!-- =========================================================
+         CABECERA CON MENÚ HAMBURGUESA
+         ========================================================= -->
+    <header class="cabecera">
+        <div class="contenedor cabecera-interna">
+            <a class="logo" href="index.html">
+                <img src="img/Zaguates_logo.svg" alt="Logo Zaguates" width="64" height="48">
+            </a>
+
+            <!-- Checkbox oculto que hace funcionar el menú -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            
+            <!-- El icono de la hamburguesa -->
+            <label for="menu-toggle" class="menu-label">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <!-- Navegación que se oculta en celular y se muestra en PC -->
+            <nav class="navegacion" aria-label="Menú principal">
+                <a href="transita.html">Transitá</a>
+                <a href="animales.html">Apadriná</a>
+                <a href="equipos.html">Equipos</a>
+                <a href="index.html#tienda">Tienda</a>
+                <a href="info.html">Info útil</a>
+                <a href="/dona.html" class="btn-hueso btn-hueso--verde">
+                    <span>DONÁ AHORA</span>
+                </a>
+                <a href="#" class="btn-hueso btn-hueso--rosa">
+                    <span>ADOPTÁ</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- =========================================================
+         CONTENIDO PRINCIPAL
+         ========================================================= -->
+    <main>
+
+        <!-- HERO -->
+        <section class="lista-hero">
+            <div class="contenedor">
+                <a class="volver" href="index.html">&larr; Inicio</a>
+                <span class="eyebrow">Hogares temporales</span>
+                <h1>Transitá</h1>
+                <hr class="divisor">
+                <p>
+                    No podés adoptar para siempre, ¿pero tenés espacio en tu casa y
+                    corazón por un tiempo? El tránsito salva vidas.
+                </p>
+            </div>
+            <span class="lista-hero__deco" aria-hidden="true">🏠</span>
+        </section>
+
+
+        <!-- FORMULARIOS DE TRANSITO -->
+        <section class="seccion transito">
+            <div class="contenedor">
+                <div class="transito-grid">
+
+                    <!-- Tránsito de perros -->
+                    <article class="tarjeta-transito tarjeta-transito--perro">
+                        <div class="tarjeta-transito__cabecera">
+                            <span class="tarjeta-transito__emoji" aria-hidden="true">🐶</span>
+                            <div>
+                                <span class="eyebrow eyebrow-verde">Tránsito temporal</span>
+                                <h2 class="tarjeta-transito__titulo">Transitá un perro</h2>
+                            </div>
+                        </div>
+
+                        <div class="tarjeta-transito__cuerpo">
+                            <p class="tarjeta-transito__intro">
+                                Los hogares de tránsito son fundamentales: le dan a los animales
+                                un ambiente familiar mientras esperan su hogar definitivo.
+                            </p>
+
+                            <form action="#" method="post">
+                                <div class="campos-fila">
+                                    <div class="campo">
+                                        <label for="nombre-perro">Nombre completo</label>
+                                        <input type="text" id="nombre-perro" name="nombre" placeholder="Tu nombre">
+                                    </div>
+                                    <div class="campo">
+                                        <label for="email-perro">Correo electrónico</label>
+                                        <input type="email" id="email-perro" name="email" placeholder="tu@correo.com">
+                                    </div>
+                                </div>
+
+                                <div class="campos-fila">
+                                    <div class="campo">
+                                        <label for="tel-perro">Teléfono / WhatsApp</label>
+                                        <input type="tel" id="tel-perro" name="telefono" placeholder="+54 11 1234-5678">
+                                    </div>
+                                    <div class="campo">
+                                        <label for="prov-perro">Provincia / Cantón</label>
+                                        <input type="text" id="prov-perro" name="provincia" placeholder="Ej. San José, Escazú">
+                                    </div>
+                                </div>
+
+                                <div class="campo">
+                                    <label for="vivienda-perro">Tipo de vivienda</label>
+                                    <textarea id="vivienda-perro" name="vivienda"></textarea>
+                                </div>
+
+                                <div class="campo">
+                                    <label for="exp-perro">Experiencia con perros</label>
+                                    <textarea id="exp-perro" name="experiencia"></textarea>
+                                </div>
+
+                                <div class="campo">
+                                    <label for="disp-perro">Disponibilidad de tiempo en casa</label>
+                                    <textarea id="disp-perro" name="disponibilidad"></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-verde">Postularme como hogar</button>
+                            </form>
+                        </div>
+                    </article>
+
+                    <!-- Tránsito de gatos -->
+                    <article class="tarjeta-transito tarjeta-transito--gato">
+                        <div class="tarjeta-transito__cabecera">
+                            <span class="tarjeta-transito__emoji" aria-hidden="true">🐱</span>
+                            <div>
+                                <span class="eyebrow">Tránsito temporal</span>
+                                <h2 class="tarjeta-transito__titulo">Transitá un gato</h2>
+                            </div>
+                        </div>
+
+                        <div class="tarjeta-transito__cuerpo">
+                            <p class="tarjeta-transito__intro">
+                                Los hogares de tránsito son fundamentales: le dan a los animales
+                                un ambiente familiar mientras esperan su hogar definitivo.
+                            </p>
+
+                            <form action="#" method="post">
+                                <div class="campos-fila">
+                                    <div class="campo">
+                                        <label for="nombre-gato">Nombre completo</label>
+                                        <input type="text" id="nombre-gato" name="nombre" placeholder="Tu nombre">
+                                    </div>
+                                    <div class="campo">
+                                        <label for="email-gato">Correo electrónico</label>
+                                        <input type="email" id="email-gato" name="email" placeholder="tu@correo.com">
+                                    </div>
+                                </div>
+
+                                <div class="campos-fila">
+                                    <div class="campo">
+                                        <label for="tel-gato">Teléfono / WhatsApp</label>
+                                        <input type="tel" id="tel-gato" name="telefono" placeholder="+54 11 1234-5678">
+                                    </div>
+                                    <div class="campo">
+                                        <label for="prov-gato">Provincia / Cantón</label>
+                                        <input type="text" id="prov-gato" name="provincia" placeholder="Ej. San José, Escazú">
+                                    </div>
+                                </div>
+
+                                <div class="campo">
+                                    <label for="vivienda-gato">Tipo de vivienda</label>
+                                    <textarea id="vivienda-gato" name="vivienda"></textarea>
+                                </div>
+
+                                <div class="campo">
+                                    <label for="exp-gato">Experiencia con gatos</label>
+                                    <textarea id="exp-gato" name="experiencia"></textarea>
+                                </div>
+
+                                <div class="campo">
+                                    <label for="disp-gato">Disponibilidad de tiempo en casa</label>
+                                    <textarea id="disp-gato" name="disponibilidad"></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-rosa">Postularme como hogar</button>
+                            </form>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         PIE DE PAGINA
+         ========================================================= -->
+    <footer class="pie">
+        <div class="contenedor">
+
+            <div class="pie-grid">
+
+                <div class="pie-sobre">
+                     <a class="logo" href="index.html">
+                        <img src="img/ZaguatesLogo_BLanco.svg" alt="Logo Zaguates" width="100" height="100">
+                       
+                    </a>
+                    <p>
+                        ONG sin fines de lucro con sede en Buenos Aires. Rescatamos y
+                        damos en adopción animales desde 2010.
+                    </p>
+                </div>
+
+                <div class="pie-columna">
+                    <h3>Navegación</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="animales.html">Apadriná</a></li>
+                        <li><a href="equipos.html">Equipos</a></li>
+                        <li><a href="index.html#contacto">Info Útil</a></li>
+                    </ul>
+                </div>
+
+                <div class="pie-columna">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Aviso legal</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+
+               <div class="grupo-botones" style="flex-direction: column;">
+                <a href="#" class="btn-hueso btn-hueso--verde" style=" height: 4rem">
+                    <span>DONÁ AHORA</span>
+                </a>
+                <a href="#" class="btn-hueso btn-hueso--rosa" style=" height: 4rem">
+                    <span>ADOPTÁ</span>
+                </a>
+            </div>
+        </div>
+
+            </div>
+
+            <div class="pie-final">
+                © 2026 Zaguates · Buenos Aires, Argentina · Todos los derechos reservados.
+                Hecho con amor por quienes aman a los animales 🐾
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>

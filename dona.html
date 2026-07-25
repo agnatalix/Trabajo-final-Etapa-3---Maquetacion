@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doná Ahora | Zaguates</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- =========================================================
+         CABECERA CON MENÚ HAMBURGUESA
+         ========================================================= -->
+    <header class="cabecera">
+        <div class="contenedor cabecera-interna">
+            <a class="logo" href="index.html">
+                <img src="img/Zaguates_logo.svg" alt="Logo Zaguates" width="64" height="48">
+            </a>
+
+            <!-- Checkbox oculto que hace funcionar el menú -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            
+            <!-- El icono de la hamburguesa -->
+            <label for="menu-toggle" class="menu-label">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <!-- Navegación que se oculta en celular y se muestra en PC -->
+            <nav class="navegacion" aria-label="Menú principal">
+                <a href="transita.html">Transitá</a>
+                <a href="animales.html">Apadriná</a>
+                <a href="equipos.html">Equipos</a>
+                <a href="index.html#tienda">Tienda</a>
+                <a href="info.html">Info útil</a>
+                <a href="/dona.html" class="btn-hueso btn-hueso--verde">
+                    <span>DONÁ AHORA</span>
+                </a>
+                <a href="#" class="btn-hueso btn-hueso--rosa">
+                    <span>ADOPTÁ</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- =========================================================
+         CONTENIDO PRINCIPAL
+         ========================================================= -->
+    <main>
+
+        <!-- HERO DONACIONES -->
+        <section class="donar-hero">
+            <div class="contenedor donar-hero__grid">
+                <div class="donar-hero__texto">
+                    <a class="volver" href="index.html">&larr; Inicio</a>
+                    <span class="eyebrow">Apadriná &middot; Doná</span>
+                    <h1>Doná ahora</h1>
+                    <hr class="divisor">
+                    <p>Cada aporte va directo al albergue. Elegí la forma que más te resulte cómoda.</p>
+                </div>
+                <div class="donar-hero__grafico">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="icono-corazon-bg" aria-hidden="true">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+       <!-- MÉTODOS DE DONACIÓN -->
+        <section class="seccion" id="donaciones" style="background-color: var(--color-fondo-suave);">
+            <div class="contenedor">
+
+                <!-- Intro centrada -->
+                <div class="dona-intro">
+                    <span class="eyebrow eyebrow-rosa">Apadriná &middot; Doná</span>
+                    <h2>Tu apoyo salva vidas</h2>
+                    <p>
+                        Cada aporte va directo a la atención veterinaria, alimentación y
+                        cuidado de los animales en el albergue. Elegí la forma que más te resulte cómoda.
+                    </p>
+                </div>
+
+                <!-- Grid de 3 tarjetas -->
+                <div class="dona-grid">
+
+                    <!-- Tarjeta 1: Mercado Pago -->
+                    <article class="dona-tarjeta dona-tarjeta--mp">
+                        <div class="dona-tarjeta__cabecera">
+                            <div class="dona-tarjeta__icono dona-tarjeta__icono--verde">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="23 4 23 10 17 10"/>
+                                    <polyline points="1 20 1 14 7 14"/>
+                                    <path d="M3.5 9a9 9 0 0 1 14.8-3.3L23 10M1 14l4.7 4.3A9 9 0 0 0 20.5 15"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="dona-tarjeta__etiqueta">Débito automático</span>
+                                <h3 class="dona-tarjeta__titulo">Mercado Pago</h3>
+                            </div>
+                        </div>
+
+                        <div class="dona-tarjeta__cuerpo">
+                            <p class="dona-tarjeta__desc">
+                                Suscribite a un aporte mensual automático. Podés cancelar cuando
+                                quieras desde tu cuenta de Mercado Pago.
+                            </p>
+                            <ul class="dona-checklist">
+                                <li>Sin comisiones extra</li>
+                                <li>Se descuenta automáticamente cada mes</li>
+                                <li>Podés pausar o cancelar cuando quieras</li>
+                            </ul>
+                        </div>
+
+                        <div class="dona-tarjeta__pie">
+                            <a class="btn btn-verde btn-bloque" href="#">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                Suscribirme en MP
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 2: Cuenta bancaria -->
+                    <article class="dona-tarjeta dona-tarjeta--banco">
+                        <div class="dona-tarjeta__cabecera">
+                            <div class="dona-tarjeta__icono dona-tarjeta__icono--rosa">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="2" y="5" width="20" height="14" rx="2"/>
+                                    <line x1="2" y1="10" x2="22" y2="10"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="dona-tarjeta__etiqueta">Transferencia</span>
+                                <h3 class="dona-tarjeta__titulo">Cuenta bancaria</h3>
+                            </div>
+                        </div>
+
+                        <div class="dona-tarjeta__cuerpo">
+                            <p class="dona-tarjeta__desc">
+                                Hacé una transferencia directa o SINPE Móvil. Tocá el número
+                                de cuenta para copiarlo.
+                            </p>
+
+                            <div class="dona-datos">
+                                <div class="dato-bancario">
+                                    <div>
+                                        <span class="dato-bancario__etiqueta">Mercado Pago (CVU)</span>
+                                        <span class="dato-bancario__numero">0000003100012345678901</span>
+                                        <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                                    </div>
+                                    <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="dato-bancario">
+                                    <div>
+                                        <span class="dato-bancario__etiqueta">Banco Nación (CBU)</span>
+                                        <span class="dato-bancario__numero">0110012340001234567890</span>
+                                        <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                                    </div>
+                                    <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="dato-bancario">
+                                    <div>
+                                        <span class="dato-bancario__etiqueta">Banco Galicia (CBU)</span>
+                                        <span class="dato-bancario__numero">0070108330004034551800</span>
+                                        <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                                    </div>
+                                    <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dona-tarjeta__pie">
+                            <p class="dona-tarjeta__nota">
+                                Después de transferir envianos el comprobante a
+                                <a href="mailto:hola@zaguates.cr">hola@zaguates.cr</a>
+                                para registrar tu donación.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 3: PayPal -->
+                    <article class="dona-tarjeta dona-tarjeta--paypal">
+                        <div class="dona-tarjeta__cabecera">
+                            <div class="dona-tarjeta__icono dona-tarjeta__icono--azul">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <line x1="2" y1="12" x2="22" y2="12"/>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="dona-tarjeta__etiqueta">Internacional</span>
+                                <h3 class="dona-tarjeta__titulo">PayPal</h3>
+                            </div>
+                        </div>
+
+                        <div class="dona-tarjeta__cuerpo">
+                            <p class="dona-tarjeta__desc">
+                                Ideal si estás fuera de Costa Rica o preferís pagar con tarjeta de
+                                crédito internacional. Podés hacer donaciones únicas o recurrentes.
+                            </p>
+                            <ul class="dona-checklist">
+                                <li>Acepta todas las tarjetas</li>
+                                <li>Donación única o mensual</li>
+                                <li>Recibo de donación automático</li>
+                            </ul>
+                        </div>
+
+                        <div class="dona-tarjeta__pie">
+                            <a class="btn btn-azul btn-bloque" href="#">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                Donar con PayPal
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Disclaimer -->
+                <p class="dona-disclaimer">
+                    Zaguates es una ONG sin fines de lucro &middot; 100% de tu donación va al albergue &middot; CUIT 30-XXXXXXXX-X &middot; Buenos Aires, Argentina
+                </p>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================================
+         PIE DE PAGINA
+         ========================================================= -->
+    <footer class="pie" id="tienda">
+        <div class="contenedor">
+
+            <div class="pie-grid">
+
+                <div class="pie-sobre">
+                    <a class="logo" href="index.html">
+                        <img src="img/ZaguatesLogo_BLanco.svg" alt="Logo Zaguates" width="100" height="100">
+                       
+                    </a>
+                    <p>
+                        ONG sin fines de lucro con sede en Buenos Aires. Rescatamos y
+                        damos en adopción animales desde 2010.
+                    </p>
+                </div>
+
+                <div class="pie-columna">
+                    <h3>Navegación</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="animales.html">Apadriná</a></li>
+                        <li><a href="equipos.html">Equipos</a></li>
+                        <li><a href="#contacto">Info Útil</a></li>
+                    </ul>
+                </div>
+
+                <div class="pie-columna">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Aviso legal</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+
+              <div class="grupo-botones" style="flex-direction: column;">
+                <a href="/donaciones.html" class="btn-hueso btn-hueso--verde" style=" height: 4rem">
+                    <span>DONÁ AHORA</span>
+                </a>
+                <a href="#" class="btn-hueso btn-hueso--rosa" style=" height: 4rem">
+                    <span>ADOPTÁ</span>
+                </a>
+            </div>
+        </div>
+
+            </div>
+
+            <div class="pie-final">
+                © 2020 Zaguates · Buenos Aires, Argentina · Todos los derechos reservados.
+                Hecho con amor por quienes aman a los animales 🐾
+            </div>
+
+        </div>
+    </footer>
+
+
+</body>
+</html>

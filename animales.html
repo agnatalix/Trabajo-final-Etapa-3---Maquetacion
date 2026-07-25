@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos los animales | Zaguates</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- =========================================================
+         CABECERA CON MENÚ HAMBURGUESA
+         ========================================================= -->
+    <header class="cabecera">
+        <div class="contenedor cabecera-interna">
+            <a class="logo" href="index.html">
+                <img src="img/Zaguates_logo.svg" alt="Logo Zaguates" width="64" height="48">
+            </a>
+
+            <!-- Checkbox oculto que hace funcionar el menú -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            
+            <!-- El icono de la hamburguesa -->
+            <label for="menu-toggle" class="menu-label">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <!-- Navegación que se oculta en celular y se muestra en PC -->
+            <nav class="navegacion" aria-label="Menú principal">
+                <a href="transita.html">Transitá</a>
+                <a href="animales.html">Apadriná</a>
+                <a href="equipos.html">Equipos</a>
+                <a href="index.html#tienda">Tienda</a>
+                <a href="info.html">Info útil</a>
+                <a href="/dona.html" class="btn-hueso btn-hueso--verde">
+                    <span>DONÁ AHORA</span>
+                </a>
+                <a href="#" class="btn-hueso btn-hueso--rosa">
+                    <span>ADOPTÁ</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- =========================================================
+         CONTENIDO PRINCIPAL
+         ========================================================= -->
+    <main>
+
+        <!-- HERO de la lista -->
+        <section class="lista-hero">
+            <div class="contenedor">
+                <a class="volver" href="index.html">&larr; Inicio</a>
+                <span class="eyebrow">Esperando un hogar</span>
+                <h1>Todos los animales</h1>
+                <hr class="divisor">
+                <p>Cada uno tiene su historia. Podés apadrinarlo económicamente o adoptarlo y llevártelo a casa.</p>
+            </div>
+            <span class="lista-hero__patas" aria-hidden="true">🐾</span>
+        </section>
+
+
+        <!-- LISTA DE ANIMALES -->
+        <section class="seccion lista" id="animales">
+            <div class="contenedor">
+
+                <!-- Filtro por categoría sin JavaScript:
+                     radios ocultos + labels que actúan como chips.
+                     El radio marcado oculta por CSS las fichas cuyo
+                     data-categoria no coincide. -->
+                <input class="filtro-radio" type="radio" name="filtro" id="f-todos" checked>
+                <input class="filtro-radio" type="radio" name="filtro" id="f-cachorro">
+                <input class="filtro-radio" type="radio" name="filtro" id="f-adulto">
+                <input class="filtro-radio" type="radio" name="filtro" id="f-gato">
+                <input class="filtro-radio" type="radio" name="filtro" id="f-conejo">
+
+                <div class="filtros">
+                    <label class="chip" for="f-todos">Todos <span>9</span></label>
+                    <label class="chip" for="f-cachorro">Cachorro <span>2</span></label>
+                    <label class="chip" for="f-adulto">Adulto <span>4</span></label>
+                    <label class="chip" for="f-gato">Gato <span>2</span></label>
+                    <label class="chip" for="f-conejo">Conejo <span>1</span></label>
+                </div>
+
+                <div class="grilla-animales">
+                <article class="ficha-animal" data-categoria="adulto">
+                    <div class="ficha-animal__media">
+                        <img class="ficha-animal__imagen" src="img/Luna.png" alt="Luna">
+                        <span class="ficha-animal__tamano">Mediana</span>
+                        
+                    </div>
+                    <div class="ficha-animal__cuerpo">
+                        <div class="ficha-animal__cabecera">
+                            <h3 class="ficha-animal__nombre">Luna</h3>
+                            <span class="ficha-animal__edad">2 años</span>
+                        </div>
+                        <p class="ficha-animal__tipo">Zaguate mediana</p>
+                        <div class="ficha-animal__tags">
+                            <span class="tag">Amigable</span>
+                            <span class="tag">Juguetona</span>
+                            <span class="tag">Vacunada</span>
+                        </div>
+                        <p class="ficha-animal__desc">Luna es una perrita cariñosa rescatada de la calle. Le encanta jugar y dar paseos. Convive bien con niños y otros perros.</p>
+                        <div class="ficha-animal__acciones">
+                            <a class="btn btn-verde" href="#apadrina-luna">Apadriná</a>
+                            <a class="btn btn-rosa" href="#adopta-luna">Adoptá</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="ficha-animal" data-categoria="adulto">
+                    <div class="ficha-animal__media">
+                        <img class="ficha-animal__imagen" src="img/Max.png" alt="Max">
+                        <span class="ficha-animal__tamano">Grande</span>
+                        
+                    </div>
+                    <div class="ficha-animal__cuerpo">
+                        <div class="ficha-animal__cabecera">
+                            <h3 class="ficha-animal__nombre">Max</h3>
+                            <span class="ficha-animal__edad">4 años</span>
+                        </div>
+                        <p class="ficha-animal__tipo">Zaguate grande</p>
+                    <p class="ficha-animal__alerta"><span class="tag-alerta">&#9888; Urgente</span></p>
+                        <div class="ficha-animal__tags">
+                            <span class="tag">Tranquilo</span>
+                            <span class="tag">Leal</span>
+                            <span class="tag">Con niños</span>
+                        </div>
+                        <p class="ficha-animal__desc">Max es noble y sereno. Lleva 8 meses en el albergue esperando una familia. Necesita una casa con espacio.</p>
+                        <div class="ficha-animal__acciones">
+                            <a class="btn btn-verde" href="#apadrina-max">Apadriná</a>
+                            <a class="btn btn-rosa" href="#adopta-max">Adoptá</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="ficha-animal" data-categoria="cachorro">
+                    <div class="ficha-animal__media">
+                        <img class="ficha-animal__imagen" src="img/Coco.png" alt="Coco">
+                        <span class="ficha-animal__tamano">Pequeña</span>
+                     
+                    </div>
+                    <div class="ficha-animal__cuerpo">
+                        <div class="ficha-animal__cabecera">
+                            <h3 class="ficha-animal__nombre">Coco</h3>
+                            <span class="ficha-animal__edad">4 meses</span>
+                        </div>
+                        <p class="ficha-animal__tipo">Zaguate pequeña</p>
+                        <div class="ficha-animal__tags">
+                            <span class="tag">Activa</span>
+                            <span class="tag">Cariñosa</span>
+                            <span class="tag">Desparasitada</span>
+                        </div>
+                        <p class="ficha-animal__desc">Coco fue rescatada con 3 meses. Llena de vida, lista para encontrar su hogar para siempre.</p>
+                        <div class="ficha-animal__acciones">
+                            <a class="btn btn-verde" href="#apadrina-coco">Apadriná</a>
+                            <a class="btn btn-rosa" href="#adopta-coco">Adoptá</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="ficha-animal" data-categoria="adulto">
+                    <div class="ficha-animal__media">
+                        <img class="ficha-animal__imagen" src="img/Bella.png" alt="Bella">
+                        <span class="ficha-animal__tamano">Mediana</span>
+                        
+                    </div>
+                    <div class="ficha-animal__cuerpo">
+                        <div class="ficha-animal__cabecera">
+                            <h3 class="ficha-animal__nombre">Bella</h3>
+                            <span class="ficha-animal__edad">3 años</span>
+                        </div>
+                        <p class="ficha-animal__tipo">Zaguate mediana</p>
+                    <p class="ficha-animal__alerta"><span class="tag-alerta">&#9888; Atención médica</span></p>
+                        <div class="ficha-animal__tags">
+                            <span class="tag">Dulce</span>
+                            <span class="tag">Tímida</span>
+                            <span class="tag">Con otros perros</span>
+                        </div>
+                        <p class="ficha-animal__desc">Bella necesita atención veterinaria y un hogar tranquilo. Una vez que confía, es pura ternura.</p>
+                        <div class="ficha-animal__acciones">
+                            <a class="btn btn-verde" href="#apadrina-bella">Apadriná</a>
+                            <a class="btn btn-rosa" href="#adopta-bella">Adoptá</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="ficha-animal" data-categoria="adulto">
+                    <div class="ficha-animal__media">
+                        <img class="ficha-animal__imagen" src="img/Toby.png" alt="Toby">
+                        <span class="ficha-animal__tamano">Pequeña</span>
+                        
+                    </div>
+                    <div class="ficha-animal__cuerpo">
+                        <div class="ficha-animal__cabecera">
+                            <h3 class="ficha-animal__nombre">Toby</h3>
+                            <span class="ficha-animal__edad">6 años</span>
+                        </div>
+                        <p class="ficha-animal__tipo">Zaguate pequeña</p>
+                        <div class="ficha-animal__tags">
+                            <span class="tag">Senior</span>
+                            <span class="tag">Educado</span>
+                            <span class="tag">Tranquilo</span>
+                        </div>
+                        <p class="ficha-animal__desc">Toby merece pasar sus últimos años con amor. Completamente educado, ideal para hogares serenos.</p>
+                        <div class="ficha-animal__acciones">
+                            <a class="btn btn-verde" href="#apadrina-toby">Apadriná</a>
+                            <a class="btn btn-rosa" href="#adopta-toby">Adoptá</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="ficha-animal" data-categoria="cachorro">
+                    <div class="ficha-animal__media">
+                        <img class="ficha-animal__imagen" src="img/Nala.png" alt="Nala">
+                        <span class="ficha-animal__tamano">Grande</span>
+                        
+                    </div>
+                    <div class="ficha-animal__cuerpo">
+                        <div class="ficha-animal__cabecera">
+                            <h3 class="ficha-animal__nombre">Nala</h3>
+                            <span class="ficha-animal__edad">3 meses</span>
+                        </div>
+                        <p class="ficha-animal__tipo">Zaguate grande</p>
+                    <p class="ficha-animal__alerta"><span class="tag-alerta">&#9888; Urgente</span></p>
+                        <div class="ficha-animal__tags">
+                            <span class="tag">Energética</span>
+                            <span class="tag">Social</span>
+                            <span class="tag">Esterilizada</span>
+                        </div>
+                        <p class="ficha-animal__desc">Nala fue abandonada y rescatada hace 2 meses. Le encanta estar con personas y otros animales.</p>
+                        <div class="ficha-animal__acciones">
+                            <a class="btn btn-verde" href="#apadrina-nala">Apadriná</a>
+                            <a class="btn btn-rosa" href="#adopta-nala">Adoptá</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="ficha-animal" data-categoria="gato">
+                    <div class="ficha-animal__media">
+                        <img class="ficha-animal__imagen" src="img/Michi.png" alt="Michi">
+                        <span class="ficha-animal__tamano">Pequeña</span>
+                        
+                    </div>
+                    <div class="ficha-animal__cuerpo">
+                        <div class="ficha-animal__cabecera">
+                            <h3 class="ficha-animal__nombre">Michi</h3>
+                            <span class="ficha-animal__edad">2 años</span>
+                        </div>
+                        <p class="ficha-animal__tipo">Gato doméstico</p>
+                        <div class="ficha-animal__tags">
+                            <span class="tag">Independiente</span>
+                            <span class="tag">Cariñoso</span>
+                            <span class="tag">Castrado</span>
+                        </div>
+                        <p class="ficha-animal__desc">Michi es un gato tranquilo y afectuoso. Se lleva bien con otros gatos y disfruta de los ratos de mimos.</p>
+                        <div class="ficha-animal__acciones">
+                            <a class="btn btn-verde" href="#apadrina-michi">Apadriná</a>
+                            <a class="btn btn-rosa" href="#adopta-michi">Adoptá</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="ficha-animal" data-categoria="gato">
+                    <div class="ficha-animal__media">
+                        <img class="ficha-animal__imagen" src="img/Simon.png" alt="Luna Gris">
+                        <span class="ficha-animal__tamano">Pequeña</span>
+                        
+                    </div>
+                    <div class="ficha-animal__cuerpo">
+                        <div class="ficha-animal__cabecera">
+                            <h3 class="ficha-animal__nombre">Simon</h3>
+                            <span class="ficha-animal__edad">1 año</span>
+                        </div>
+                        <p class="ficha-animal__tipo">Gato callejero</p>
+                    <p class="ficha-animal__alerta"><span class="tag-alerta">&#9888; Urgente</span></p>
+                        <div class="ficha-animal__tags">
+                            <span class="tag">Jugueton</span>
+                            <span class="tag">Curioso</span>
+                            <span class="tag">Vacunado</span>
+                        </div>
+                        <p class="ficha-animal__desc">Rescatada de la calle con 3 meses. Muy curiosa y juguetona. Necesita un hogar con paciencia.</p>
+                        <div class="ficha-animal__acciones">
+                            <a class="btn btn-verde" href="#apadrina-luna-gris">Apadriná</a>
+                            <a class="btn btn-rosa" href="#adopta-luna-gris">Adoptá</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="ficha-animal" data-categoria="conejo">
+                    <div class="ficha-animal__media">
+                        <img class="ficha-animal__imagen" src="img/Orejas.png" alt="Bunny">
+                        <span class="ficha-animal__tamano">Pequeña</span>
+                        
+                    </div>
+                    <div class="ficha-animal__cuerpo">
+                        <div class="ficha-animal__cabecera">
+                            <h3 class="ficha-animal__nombre">Bunny</h3>
+                            <span class="ficha-animal__edad">8 meses</span>
+                        </div>
+                        <p class="ficha-animal__tipo">Conejo enano</p>
+                        <div class="ficha-animal__tags">
+                            <span class="tag">Manso</span>
+                            <span class="tag">Sociable</span>
+                            <span class="tag">Desparasitado</span>
+                        </div>
+                        <p class="ficha-animal__desc">Bunny es un conejito enano muy dócil. Busca un hogar tranquilo con espacio para saltar.</p>
+                        <div class="ficha-animal__acciones">
+                            <a class="btn btn-verde" href="#apadrina-bunny">Apadriná</a>
+                            <a class="btn btn-rosa" href="#adopta-bunny">Adoptá</a>
+                        </div>
+                    </div>
+                </article>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         PIE DE PAGINA
+         ========================================================= -->
+    <footer class="pie">
+        <div class="contenedor">
+
+            <div class="pie-grid">
+
+                <div class="pie-sobre">
+                   <a class="logo" href="index.html">
+                        <img src="img/ZaguatesLogo_BLanco.svg" alt="Logo Zaguates" width="100" height="100">
+                       
+                    </a>
+                    <p>
+                        ONG sin fines de lucro con sede en Buenos Aires. Rescatamos y
+                        damos en adopción animales desde 2010.
+                    </p>
+                </div>
+
+                <div class="pie-columna">
+                    <h3>Navegación</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="animales.html">Apadriná</a></li>
+                        <li><a href="equipos.html">Equipos</a></li>
+                        <li><a href="index.html#contacto">Info Útil</a></li>
+                    </ul>
+                </div>
+
+                <div class="pie-columna">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Aviso legal</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+
+                <div class="grupo-botones" style="flex-direction: column;">
+                <a href="#" class="btn-hueso btn-hueso--verde" style=" height: 4rem">
+                    <span>DONÁ AHORA</span>
+                </a>
+                <a href="#" class="btn-hueso btn-hueso--rosa" style=" height: 4rem">
+                    <span>ADOPTÁ</span>
+                </a>
+            </div>
+        </div>
+
+            </div>
+
+            <div class="pie-final">
+                © 2026 Zaguates · Buenos Aires, Argentina · Todos los derechos reservados.
+                Hecho con amor por quienes aman a los animales 🐾
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- =========================================================
+         MODALES (se muestran con :target, sin JavaScript)
+         ========================================================= -->
+        <div class="modal" id="adopta-luna" role="dialog" aria-modal="true" aria-labelledby="titulo-adopta-luna">
+            <a class="modal__fondo" href="#animales" aria-label="Cerrar"></a>
+            <div class="modal__caja">
+                <a class="modal__cerrar" href="#animales" aria-label="Cerrar">&times;</a>
+                <div class="modal__media">
+                    <img src="img/luna.jpg" alt="Luna">
+                    <span class="ficha-animal__tamano">Mediana &middot; 2 años</span>
+                </div>
+                <div class="modal__contenido">
+                    <span class="eyebrow">Adoptá a</span>
+                    <h2 id="titulo-adopta-luna">Luna</h2>
+                    <p class="modal__tipo">Zaguate mediana</p>
+                    <div class="ficha-animal__tags">
+                        <span class="tag">Amigable</span>
+                        <span class="tag">Juguetona</span>
+                        <span class="tag">Vacunada</span>
+                    </div>
+                    <p>Luna es una perrita cariñosa rescatada de la calle. Le encanta jugar y dar paseos. Convive bien con niños y otros perros.</p>
+                    <a class="modal__link" href="#">&#8599; Completar formulario oficial de adopción</a>
+                    <h3>O completá el formulario acá</h3>
+                    <form action="#" method="post">
+                        <div class="campo">
+                            <label for="nombre-luna">Nombre completo</label>
+                            <input type="text" id="nombre-luna" name="nombre" placeholder="Tu nombre">
+                        </div>
+                        <div class="campo">
+                            <label for="email-luna">Correo electrónico</label>
+                            <input type="email" id="email-luna" name="email" placeholder="tu@correo.com">
+                        </div>
+                        <div class="campo">
+                            <label for="tel-luna">Teléfono / WhatsApp</label>
+                            <input type="tel" id="tel-luna" name="telefono" placeholder="+54 11 1234-5678">
+                        </div>
+                        <div class="campo">
+                            <label for="vivienda-luna">¿Cómo es tu vivienda?</label>
+                            <textarea id="vivienda-luna" name="vivienda"></textarea>
+                        </div>
+                        <div class="campo">
+                            <label for="motivo-luna">¿Por qué querés adoptar a Luna?</label>
+                            <textarea id="motivo-luna" name="motivo" placeholder="Contanos sobre vos y tu hogar..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-rosa">Enviar solicitud</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="apadrina-luna" role="dialog" aria-modal="true" aria-labelledby="titulo-apadrina-luna">
+            <a class="modal__fondo" href="#animales" aria-label="Cerrar"></a>
+            <div class="modal__caja">
+                <a class="modal__cerrar" href="#animales" aria-label="Cerrar">&times;</a>
+                <div class="modal__media">
+                    <img src="img/luna.jpg" alt="Luna">
+                    <span class="ficha-animal__tamano">Mediana &middot; 2 años</span>
+                </div>
+                <div class="modal__contenido">
+                    <span class="eyebrow eyebrow-verde">Apadriná a</span>
+                    <h2 id="titulo-apadrina-luna">Luna</h2>
+                    <p class="modal__tipo">Zaguate mediana</p>
+                    <p>Al apadrinarlo cubrís su alimentación, atención veterinaria y cuidados mensuales mientras espera un hogar. Cualquier monto ayuda.</p>
+                    <h3>Datos bancarios</h3>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Mercado Pago (CVU)</span>
+                            <span class="dato-bancario__numero">0000003100012345678901</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Banco Nación (CBU)</span>
+                            <span class="dato-bancario__numero">0110012340001234567890</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Banco Galicia (CBU)</span>
+                            <span class="dato-bancario__numero">0070108330004034551800</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <h3>Otras formas de donar</h3>
+                    <a class="btn-bloque btn-mp" href="#">&#8599; Pagar con Mercado Pago</a>
+                    <a class="btn-bloque btn-wsp" href="#">&#128172; Unirte al grupo de WhatsApp</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="adopta-max" role="dialog" aria-modal="true" aria-labelledby="titulo-adopta-max">
+            <a class="modal__fondo" href="#animales" aria-label="Cerrar"></a>
+            <div class="modal__caja">
+                <a class="modal__cerrar" href="#animales" aria-label="Cerrar">&times;</a>
+                <div class="modal__media">
+                    <img src="img/max.jpg" alt="Max">
+                    <span class="ficha-animal__tamano">Grande &middot; 4 años</span>
+                </div>
+                <div class="modal__contenido">
+                    <span class="eyebrow">Adoptá a</span>
+                    <h2 id="titulo-adopta-max">Max</h2>
+                    <p class="modal__tipo">Zaguate grande</p>
+                    <div class="ficha-animal__tags">
+                        <span class="tag">Tranquilo</span>
+                        <span class="tag">Leal</span>
+                        <span class="tag">Con niños</span>
+                    </div>
+                    <p>Max es noble y sereno. Lleva 8 meses en el albergue esperando una familia. Necesita una casa con espacio.</p>
+                    <a class="modal__link" href="#">&#8599; Completar formulario oficial de adopción</a>
+                    <h3>O completá el formulario acá</h3>
+                    <form action="#" method="post">
+                        <div class="campo">
+                            <label for="nombre-max">Nombre completo</label>
+                            <input type="text" id="nombre-max" name="nombre" placeholder="Tu nombre">
+                        </div>
+                        <div class="campo">
+                            <label for="email-max">Correo electrónico</label>
+                            <input type="email" id="email-max" name="email" placeholder="tu@correo.com">
+                        </div>
+                        <div class="campo">
+                            <label for="tel-max">Teléfono / WhatsApp</label>
+                            <input type="tel" id="tel-max" name="telefono" placeholder="+54 11 1234-5678">
+                        </div>
+                        <div class="campo">
+                            <label for="vivienda-max">¿Cómo es tu vivienda?</label>
+                            <textarea id="vivienda-max" name="vivienda"></textarea>
+                        </div>
+                        <div class="campo">
+                            <label for="motivo-max">¿Por qué querés adoptar a Max?</label>
+                            <textarea id="motivo-max" name="motivo" placeholder="Contanos sobre vos y tu hogar..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-rosa">Enviar solicitud</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="apadrina-max" role="dialog" aria-modal="true" aria-labelledby="titulo-apadrina-max">
+            <a class="modal__fondo" href="#animales" aria-label="Cerrar"></a>
+            <div class="modal__caja">
+                <a class="modal__cerrar" href="#animales" aria-label="Cerrar">&times;</a>
+                <div class="modal__media">
+                    <img src="img/max.jpg" alt="Max">
+                    <span class="ficha-animal__tamano">Grande &middot; 4 años</span>
+                </div>
+                <div class="modal__contenido">
+                    <span class="eyebrow eyebrow-verde">Apadriná a</span>
+                    <h2 id="titulo-apadrina-max">Max</h2>
+                    <p class="modal__tipo">Zaguate grande</p>
+                    <p>Al apadrinarlo cubrís su alimentación, atención veterinaria y cuidados mensuales mientras espera un hogar. Cualquier monto ayuda.</p>
+                    <h3>Datos bancarios</h3>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Mercado Pago (CVU)</span>
+                            <span class="dato-bancario__numero">0000003100012345678901</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Banco Nación (CBU)</span>
+                            <span class="dato-bancario__numero">0110012340001234567890</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Banco Galicia (CBU)</span>
+                            <span class="dato-bancario__numero">0070108330004034551800</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <h3>Otras formas de donar</h3>
+                    <a class="btn-bloque btn-mp" href="#">&#8599; Pagar con Mercado Pago</a>
+                    <a class="btn-bloque btn-wsp" href="#">&#128172; Unirte al grupo de WhatsApp</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="adopta-coco" role="dialog" aria-modal="true" aria-labelledby="titulo-adopta-coco">
+            <a class="modal__fondo" href="#animales" aria-label="Cerrar"></a>
+            <div class="modal__caja">
+                <a class="modal__cerrar" href="#animales" aria-label="Cerrar">&times;</a>
+                <div class="modal__media">
+                    <img src="img/coco.jpg" alt="Coco">
+                    <span class="ficha-animal__tamano">Pequeña &middot; 4 meses</span>
+                </div>
+                <div class="modal__contenido">
+                    <span class="eyebrow">Adoptá a</span>
+                    <h2 id="titulo-adopta-coco">Coco</h2>
+                    <p class="modal__tipo">Zaguate pequeña</p>
+                    <div class="ficha-animal__tags">
+                        <span class="tag">Activa</span>
+                        <span class="tag">Cariñosa</span>
+                        <span class="tag">Desparasitada</span>
+                    </div>
+                    <p>Coco fue rescatada con 3 meses. Llena de vida, lista para encontrar su hogar para siempre.</p>
+                    <a class="modal__link" href="#">&#8599; Completar formulario oficial de adopción</a>
+                    <h3>O completá el formulario acá</h3>
+                    <form action="#" method="post">
+                        <div class="campo">
+                            <label for="nombre-coco">Nombre completo</label>
+                            <input type="text" id="nombre-coco" name="nombre" placeholder="Tu nombre">
+                        </div>
+                        <div class="campo">
+                            <label for="email-coco">Correo electrónico</label>
+                            <input type="email" id="email-coco" name="email" placeholder="tu@correo.com">
+                        </div>
+                        <div class="campo">
+                            <label for="tel-coco">Teléfono / WhatsApp</label>
+                            <input type="tel" id="tel-coco" name="telefono" placeholder="+54 11 1234-5678">
+                        </div>
+                        <div class="campo">
+                            <label for="vivienda-coco">¿Cómo es tu vivienda?</label>
+                            <textarea id="vivienda-coco" name="vivienda"></textarea>
+                        </div>
+                        <div class="campo">
+                            <label for="motivo-coco">¿Por qué querés adoptar a Coco?</label>
+                            <textarea id="motivo-coco" name="motivo" placeholder="Contanos sobre vos y tu hogar..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-rosa">Enviar solicitud</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="apadrina-coco" role="dialog" aria-modal="true" aria-labelledby="titulo-apadrina-coco">
+            <a class="modal__fondo" href="#animales" aria-label="Cerrar"></a>
+            <div class="modal__caja">
+                <a class="modal__cerrar" href="#animales" aria-label="Cerrar">&times;</a>
+                <div class="modal__media">
+                    <img src="img/coco.jpg" alt="Coco">
+                    <span class="ficha-animal__tamano">Pequeña &middot; 4 meses</span>
+                </div>
+                <div class="modal__contenido">
+                    <span class="eyebrow eyebrow-verde">Apadriná a</span>
+                    <h2 id="titulo-apadrina-coco">Coco</h2>
+                    <p class="modal__tipo">Zaguate pequeña</p>
+                    <p>Al apadrinarlo cubrís su alimentación, atención veterinaria y cuidados mensuales mientras espera un hogar. Cualquier monto ayuda.</p>
+                    <h3>Datos bancarios</h3>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Mercado Pago (CVU)</span>
+                            <span class="dato-bancario__numero">0000003100012345678901</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Banco Nación (CBU)</span>
+                            <span class="dato-bancario__numero">0110012340001234567890</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Banco Galicia (CBU)</span>
+                            <span class="dato-bancario__numero">0070108330004034551800</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <h3>Otras formas de donar</h3>
+                    <a class="btn-bloque btn-mp" href="#">&#8599; Pagar con Mercado Pago</a>
+                    <a class="btn-bloque btn-wsp" href="#">&#128172; Unirte al grupo de WhatsApp</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="adopta-bella" role="dialog" aria-modal="true" aria-labelledby="titulo-adopta-bella">
+            <a class="modal__fondo" href="#animales" aria-label="Cerrar"></a>
+            <div class="modal__caja">
+                <a class="modal__cerrar" href="#animales" aria-label="Cerrar">&times;</a>
+                <div class="modal__media">
+                    <img src="img/bella.jpg" alt="Bella">
+                    <span class="ficha-animal__tamano">Mediana &middot; 3 años</span>
+                </div>
+                <div class="modal__contenido">
+                    <span class="eyebrow">Adoptá a</span>
+                    <h2 id="titulo-adopta-bella">Bella</h2>
+                    <p class="modal__tipo">Zaguate mediana</p>
+                    <div class="ficha-animal__tags">
+                        <span class="tag">Dulce</span>
+                        <span class="tag">Tímida</span>
+                        <span class="tag">Con otros perros</span>
+                    </div>
+                    <p>Bella necesita atención veterinaria y un hogar tranquilo. Una vez que confía, es pura ternura.</p>
+                    <a class="modal__link" href="#">&#8599; Completar formulario oficial de adopción</a>
+                    <h3>O completá el formulario acá</h3>
+                    <form action="#" method="post">
+                        <div class="campo">
+                            <label for="nombre-bella">Nombre completo</label>
+                            <input type="text" id="nombre-bella" name="nombre" placeholder="Tu nombre">
+                        </div>
+                        <div class="campo">
+                            <label for="email-bella">Correo electrónico</label>
+                            <input type="email" id="email-bella" name="email" placeholder="tu@correo.com">
+                        </div>
+                        <div class="campo">
+                            <label for="tel-bella">Teléfono / WhatsApp</label>
+                            <input type="tel" id="tel-bella" name="telefono" placeholder="+54 11 1234-5678">
+                        </div>
+                        <div class="campo">
+                            <label for="vivienda-bella">¿Cómo es tu vivienda?</label>
+                            <textarea id="vivienda-bella" name="vivienda"></textarea>
+                        </div>
+                        <div class="campo">
+                            <label for="motivo-bella">¿Por qué querés adoptar a Bella?</label>
+                            <textarea id="motivo-bella" name="motivo" placeholder="Contanos sobre vos y tu hogar..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-rosa">Enviar solicitud</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="apadrina-bella" role="dialog" aria-modal="true" aria-labelledby="titulo-apadrina-bella">
+            <a class="modal__fondo" href="#animales" aria-label="Cerrar"></a>
+            <div class="modal__caja">
+                <a class="modal__cerrar" href="#animales" aria-label="Cerrar">&times;</a>
+                <div class="modal__media">
+                    <img src="img/bella.jpg" alt="Bella">
+                    <span class="ficha-animal__tamano">Mediana &middot; 3 años</span>
+                </div>
+                <div class="modal__contenido">
+                    <span class="eyebrow eyebrow-verde">Apadriná a</span>
+                    <h2 id="titulo-apadrina-bella">Bella</h2>
+                    <p class="modal__tipo">Zaguate mediana</p>
+                    <p>Al apadrinarlo cubrís su alimentación, atención veterinaria y cuidados mensuales mientras espera un hogar. Cualquier monto ayuda.</p>
+                    <h3>Datos bancarios</h3>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Mercado Pago (CVU)</span>
+                            <span class="dato-bancario__numero">0000003100012345678901</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Banco Nación (CBU)</span>
+                            <span class="dato-bancario__numero">0110012340001234567890</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Banco Galicia (CBU)</span>
+                            <span class="dato-bancario__numero">0070108330004034551800</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <h3>Otras formas de donar</h3>
+                    <a class="btn-bloque btn-mp" href="#">&#8599; Pagar con Mercado Pago</a>
+                    <a class="btn-bloque btn-wsp" href="#">&#128172; Unirte al grupo de WhatsApp</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="adopta-toby" role="dialog" aria-modal="true" aria-labelledby="titulo-adopta-toby">
+            <a class="modal__fondo" href="#animales" aria-label="Cerrar"></a>
+            <div class="modal__caja">
+                <a class="modal__cerrar" href="#animales" aria-label="Cerrar">&times;</a>
+                <div class="modal__media">
+                    <img src="img/toby.jpg" alt="Toby">
+                    <span class="ficha-animal__tamano">Pequeña &middot; 6 años</span>
+                </div>
+                <div class="modal__contenido">
+                    <span class="eyebrow">Adoptá a</span>
+                    <h2 id="titulo-adopta-toby">Toby</h2>
+                    <p class="modal__tipo">Zaguate pequeña</p>
+                    <div class="ficha-animal__tags">
+                        <span class="tag">Senior</span>
+                        <span class="tag">Educado</span>
+                        <span class="tag">Tranquilo</span>
+                    </div>
+                    <p>Toby merece pasar sus últimos años con amor. Completamente educado, ideal para hogares serenos.</p>
+                    <a class="modal__link" href="#">&#8599; Completar formulario oficial de adopción</a>
+                    <h3>O completá el formulario acá</h3>
+                    <form action="#" method="post">
+                        <div class="campo">
+                            <label for="nombre-toby">Nombre completo</label>
+                            <input type="text" id="nombre-toby" name="nombre" placeholder="Tu nombre">
+                        </div>
+                        <div class="campo">
+                            <label for="email-toby">Correo electrónico</label>
+                            <input type="email" id="email-toby" name="email" placeholder="tu@correo.com">
+                        </div>
+                        <div class="campo">
+                            <label for="tel-toby">Teléfono / WhatsApp</label>
+                            <input type="tel" id="tel-toby" name="telefono" placeholder="+54 11 1234-5678">
+                        </div>
+                        <div class="campo">
+                            <label for="vivienda-toby">¿Cómo es tu vivienda?</label>
+                            <textarea id="vivienda-toby" name="vivienda"></textarea>
+                        </div>
+                        <div class="campo">
+                            <label for="motivo-toby">¿Por qué querés adoptar a Toby?</label>
+                            <textarea id="motivo-toby" name="motivo" placeholder="Contanos sobre vos y tu hogar..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-rosa">Enviar solicitud</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="apadrina-toby" role="dialog" aria-modal="true" aria-labelledby="titulo-apadrina-toby">
+            <a class="modal__fondo" href="#animales" aria-label="Cerrar"></a>
+            <div class="modal__caja">
+                <a class="modal__cerrar" href="#animales" aria-label="Cerrar">&times;</a>
+                <div class="modal__media">
+                    <img src="img/toby.jpg" alt="Toby">
+                    <span class="ficha-animal__tamano">Pequeña &middot; 6 años</span>
+                </div>
+                <div class="modal__contenido">
+                    <span class="eyebrow eyebrow-verde">Apadriná a</span>
+                    <h2 id="titulo-apadrina-toby">Toby</h2>
+                    <p class="modal__tipo">Zaguate pequeña</p>
+                    <p>Al apadrinarlo cubrís su alimentación, atención veterinaria y cuidados mensuales mientras espera un hogar. Cualquier monto ayuda.</p>
+                    <h3>Datos bancarios</h3>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Mercado Pago (CVU)</span>
+                            <span class="dato-bancario__numero">0000003100012345678901</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Banco Nación (CBU)</span>
+                            <span class="dato-bancario__numero">0110012340001234567890</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Banco Galicia (CBU)</span>
+                            <span class="dato-bancario__numero">0070108330004034551800</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <h3>Otras formas de donar</h3>
+                    <a class="btn-bloque btn-mp" href="#">&#8599; Pagar con Mercado Pago</a>
+                    <a class="btn-bloque btn-wsp" href="#">&#128172; Unirte al grupo de WhatsApp</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="adopta-nala" role="dialog" aria-modal="true" aria-labelledby="titulo-adopta-nala">
+            <a class="modal__fondo" href="#animales" aria-label="Cerrar"></a>
+            <div class="modal__caja">
+                <a class="modal__cerrar" href="#animales" aria-label="Cerrar">&times;</a>
+                <div class="modal__media">
+                    <img src="img/nala.jpg" alt="Nala">
+                    <span class="ficha-animal__tamano">Grande &middot; 3 meses</span>
+                </div>
+                <div class="modal__contenido">
+                    <span class="eyebrow">Adoptá a</span>
+                    <h2 id="titulo-adopta-nala">Nala</h2>
+                    <p class="modal__tipo">Zaguate grande</p>
+                    <div class="ficha-animal__tags">
+                        <span class="tag">Energética</span>
+                        <span class="tag">Social</span>
+                        <span class="tag">Esterilizada</span>
+                    </div>
+                    <p>Nala fue abandonada y rescatada hace 2 meses. Le encanta estar con personas y otros animales.</p>
+                    <a class="modal__link" href="#">&#8599; Completar formulario oficial de adopción</a>
+                    <h3>O completá el formulario acá</h3>
+                    <form action="#" method="post">
+                        <div class="campo">
+                            <label for="nombre-nala">Nombre completo</label>
+                            <input type="text" id="nombre-nala" name="nombre" placeholder="Tu nombre">
+                        </div>
+                        <div class="campo">
+                            <label for="email-nala">Correo electrónico</label>
+                            <input type="email" id="email-nala" name="email" placeholder="tu@correo.com">
+                        </div>
+                        <div class="campo">
+                            <label for="tel-nala">Teléfono / WhatsApp</label>
+                            <input type="tel" id="tel-nala" name="telefono" placeholder="+54 11 1234-5678">
+                        </div>
+                        <div class="campo">
+                            <label for="vivienda-nala">¿Cómo es tu vivienda?</label>
+                            <textarea id="vivienda-nala" name="vivienda"></textarea>
+                        </div>
+                        <div class="campo">
+                            <label for="motivo-nala">¿Por qué querés adoptar a Nala?</label>
+                            <textarea id="motivo-nala" name="motivo" placeholder="Contanos sobre vos y tu hogar..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-rosa">Enviar solicitud</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="apadrina-nala" role="dialog" aria-modal="true" aria-labelledby="titulo-apadrina-nala">
+            <a class="modal__fondo" href="#animales" aria-label="Cerrar"></a>
+            <div class="modal__caja">
+                <a class="modal__cerrar" href="#animales" aria-label="Cerrar">&times;</a>
+                <div class="modal__media">
+                    <img src="img/nala.jpg" alt="Nala">
+                    <span class="ficha-animal__tamano">Grande &middot; 3 meses</span>
+                </div>
+                <div class="modal__contenido">
+                    <span class="eyebrow eyebrow-verde">Apadriná a</span>
+                    <h2 id="titulo-apadrina-nala">Nala</h2>
+                    <p class="modal__tipo">Zaguate grande</p>
+                    <p>Al apadrinarlo cubrís su alimentación, atención veterinaria y cuidados mensuales mientras espera un hogar. Cualquier monto ayuda.</p>
+                    <h3>Datos bancarios</h3>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Mercado Pago (CVU)</span>
+                            <span class="dato-bancario__numero">0000003100012345678901</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Banco Nación (CBU)</span>
+                            <span class="dato-bancario__numero">0110012340001234567890</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Banco Galicia (CBU)</span>
+                            <span class="dato-bancario__numero">0070108330004034551800</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <h3>Otras formas de donar</h3>
+                    <a class="btn-bloque btn-mp" href="#">&#8599; Pagar con Mercado Pago</a>
+                    <a class="btn-bloque btn-wsp" href="#">&#128172; Unirte al grupo de WhatsApp</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="adopta-michi" role="dialog" aria-modal="true" aria-labelledby="titulo-adopta-michi">
+            <a class="modal__fondo" href="#animales" aria-label="Cerrar"></a>
+            <div class="modal__caja">
+                <a class="modal__cerrar" href="#animales" aria-label="Cerrar">&times;</a>
+                <div class="modal__media">
+                    <img src="img/michi.jpg" alt="Michi">
+                    <span class="ficha-animal__tamano">Pequeña &middot; 2 años</span>
+                </div>
+                <div class="modal__contenido">
+                    <span class="eyebrow">Adoptá a</span>
+                    <h2 id="titulo-adopta-michi">Michi</h2>
+                    <p class="modal__tipo">Gato doméstico</p>
+                    <div class="ficha-animal__tags">
+                        <span class="tag">Independiente</span>
+                        <span class="tag">Cariñoso</span>
+                        <span class="tag">Castrado</span>
+                    </div>
+                    <p>Michi es un gato tranquilo y afectuoso. Se lleva bien con otros gatos y disfruta de los ratos de mimos.</p>
+                    <a class="modal__link" href="#">&#8599; Completar formulario oficial de adopción</a>
+                    <h3>O completá el formulario acá</h3>
+                    <form action="#" method="post">
+                        <div class="campo">
+                            <label for="nombre-michi">Nombre completo</label>
+                            <input type="text" id="nombre-michi" name="nombre" placeholder="Tu nombre">
+                        </div>
+                        <div class="campo">
+                            <label for="email-michi">Correo electrónico</label>
+                            <input type="email" id="email-michi" name="email" placeholder="tu@correo.com">
+                        </div>
+                        <div class="campo">
+                            <label for="tel-michi">Teléfono / WhatsApp</label>
+                            <input type="tel" id="tel-michi" name="telefono" placeholder="+54 11 1234-5678">
+                        </div>
+                        <div class="campo">
+                            <label for="vivienda-michi">¿Cómo es tu vivienda?</label>
+                            <textarea id="vivienda-michi" name="vivienda"></textarea>
+                        </div>
+                        <div class="campo">
+                            <label for="motivo-michi">¿Por qué querés adoptar a Michi?</label>
+                            <textarea id="motivo-michi" name="motivo" placeholder="Contanos sobre vos y tu hogar..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-rosa">Enviar solicitud</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="apadrina-michi" role="dialog" aria-modal="true" aria-labelledby="titulo-apadrina-michi">
+            <a class="modal__fondo" href="#animales" aria-label="Cerrar"></a>
+            <div class="modal__caja">
+                <a class="modal__cerrar" href="#animales" aria-label="Cerrar">&times;</a>
+                <div class="modal__media">
+                    <img src="img/michi.jpg" alt="Michi">
+                    <span class="ficha-animal__tamano">Pequeña &middot; 2 años</span>
+                </div>
+                <div class="modal__contenido">
+                    <span class="eyebrow eyebrow-verde">Apadriná a</span>
+                    <h2 id="titulo-apadrina-michi">Michi</h2>
+                    <p class="modal__tipo">Gato doméstico</p>
+                    <p>Al apadrinarlo cubrís su alimentación, atención veterinaria y cuidados mensuales mientras espera un hogar. Cualquier monto ayuda.</p>
+                    <h3>Datos bancarios</h3>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Mercado Pago (CVU)</span>
+                            <span class="dato-bancario__numero">0000003100012345678901</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Banco Nación (CBU)</span>
+                            <span class="dato-bancario__numero">0110012340001234567890</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Banco Galicia (CBU)</span>
+                            <span class="dato-bancario__numero">0070108330004034551800</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <h3>Otras formas de donar</h3>
+                    <a class="btn-bloque btn-mp" href="#">&#8599; Pagar con Mercado Pago</a>
+                    <a class="btn-bloque btn-wsp" href="#">&#128172; Unirte al grupo de WhatsApp</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="adopta-luna-gris" role="dialog" aria-modal="true" aria-labelledby="titulo-adopta-luna-gris">
+            <a class="modal__fondo" href="#animales" aria-label="Cerrar"></a>
+            <div class="modal__caja">
+                <a class="modal__cerrar" href="#animales" aria-label="Cerrar">&times;</a>
+                <div class="modal__media">
+                    <img src="img/luna-gris.jpg" alt="Luna Gris">
+                    <span class="ficha-animal__tamano">Pequeña &middot; 1 año</span>
+                </div>
+                <div class="modal__contenido">
+                    <span class="eyebrow">Adoptá a</span>
+                    <h2 id="titulo-adopta-luna-gris">Luna Gris</h2>
+                    <p class="modal__tipo">Gata callejera</p>
+                    <div class="ficha-animal__tags">
+                        <span class="tag">Juguetona</span>
+                        <span class="tag">Curiosa</span>
+                        <span class="tag">Vacunada</span>
+                    </div>
+                    <p>Rescatada de la calle con 3 meses. Muy curiosa y juguetona. Necesita un hogar con paciencia.</p>
+                    <a class="modal__link" href="#">&#8599; Completar formulario oficial de adopción</a>
+                    <h3>O completá el formulario acá</h3>
+                    <form action="#" method="post">
+                        <div class="campo">
+                            <label for="nombre-luna-gris">Nombre completo</label>
+                            <input type="text" id="nombre-luna-gris" name="nombre" placeholder="Tu nombre">
+                        </div>
+                        <div class="campo">
+                            <label for="email-luna-gris">Correo electrónico</label>
+                            <input type="email" id="email-luna-gris" name="email" placeholder="tu@correo.com">
+                        </div>
+                        <div class="campo">
+                            <label for="tel-luna-gris">Teléfono / WhatsApp</label>
+                            <input type="tel" id="tel-luna-gris" name="telefono" placeholder="+54 11 1234-5678">
+                        </div>
+                        <div class="campo">
+                            <label for="vivienda-luna-gris">¿Cómo es tu vivienda?</label>
+                            <textarea id="vivienda-luna-gris" name="vivienda"></textarea>
+                        </div>
+                        <div class="campo">
+                            <label for="motivo-luna-gris">¿Por qué querés adoptar a Luna Gris?</label>
+                            <textarea id="motivo-luna-gris" name="motivo" placeholder="Contanos sobre vos y tu hogar..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-rosa">Enviar solicitud</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="apadrina-luna-gris" role="dialog" aria-modal="true" aria-labelledby="titulo-apadrina-luna-gris">
+            <a class="modal__fondo" href="#animales" aria-label="Cerrar"></a>
+            <div class="modal__caja">
+                <a class="modal__cerrar" href="#animales" aria-label="Cerrar">&times;</a>
+                <div class="modal__media">
+                    <img src="img/luna-gris.jpg" alt="Luna Gris">
+                    <span class="ficha-animal__tamano">Pequeña &middot; 1 año</span>
+                </div>
+                <div class="modal__contenido">
+                    <span class="eyebrow eyebrow-verde">Apadriná a</span>
+                    <h2 id="titulo-apadrina-luna-gris">Luna Gris</h2>
+                    <p class="modal__tipo">Gata callejera</p>
+                    <p>Al apadrinarlo cubrís su alimentación, atención veterinaria y cuidados mensuales mientras espera un hogar. Cualquier monto ayuda.</p>
+                    <h3>Datos bancarios</h3>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Mercado Pago (CVU)</span>
+                            <span class="dato-bancario__numero">0000003100012345678901</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Banco Nación (CBU)</span>
+                            <span class="dato-bancario__numero">0110012340001234567890</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Banco Galicia (CBU)</span>
+                            <span class="dato-bancario__numero">0070108330004034551800</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <h3>Otras formas de donar</h3>
+                    <a class="btn-bloque btn-mp" href="#">&#8599; Pagar con Mercado Pago</a>
+                    <a class="btn-bloque btn-wsp" href="#">&#128172; Unirte al grupo de WhatsApp</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="adopta-bunny" role="dialog" aria-modal="true" aria-labelledby="titulo-adopta-bunny">
+            <a class="modal__fondo" href="#animales" aria-label="Cerrar"></a>
+            <div class="modal__caja">
+                <a class="modal__cerrar" href="#animales" aria-label="Cerrar">&times;</a>
+                <div class="modal__media">
+                    <img src="img/bunny.jpg" alt="Bunny">
+                    <span class="ficha-animal__tamano">Pequeña &middot; 8 meses</span>
+                </div>
+                <div class="modal__contenido">
+                    <span class="eyebrow">Adoptá a</span>
+                    <h2 id="titulo-adopta-bunny">Bunny</h2>
+                    <p class="modal__tipo">Conejo enano</p>
+                    <div class="ficha-animal__tags">
+                        <span class="tag">Manso</span>
+                        <span class="tag">Sociable</span>
+                        <span class="tag">Desparasitado</span>
+                    </div>
+                    <p>Bunny es un conejito enano muy dócil. Busca un hogar tranquilo con espacio para saltar.</p>
+                    <a class="modal__link" href="#">&#8599; Completar formulario oficial de adopción</a>
+                    <h3>O completá el formulario acá</h3>
+                    <form action="#" method="post">
+                        <div class="campo">
+                            <label for="nombre-bunny">Nombre completo</label>
+                            <input type="text" id="nombre-bunny" name="nombre" placeholder="Tu nombre">
+                        </div>
+                        <div class="campo">
+                            <label for="email-bunny">Correo electrónico</label>
+                            <input type="email" id="email-bunny" name="email" placeholder="tu@correo.com">
+                        </div>
+                        <div class="campo">
+                            <label for="tel-bunny">Teléfono / WhatsApp</label>
+                            <input type="tel" id="tel-bunny" name="telefono" placeholder="+54 11 1234-5678">
+                        </div>
+                        <div class="campo">
+                            <label for="vivienda-bunny">¿Cómo es tu vivienda?</label>
+                            <textarea id="vivienda-bunny" name="vivienda"></textarea>
+                        </div>
+                        <div class="campo">
+                            <label for="motivo-bunny">¿Por qué querés adoptar a Bunny?</label>
+                            <textarea id="motivo-bunny" name="motivo" placeholder="Contanos sobre vos y tu hogar..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-rosa">Enviar solicitud</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="apadrina-bunny" role="dialog" aria-modal="true" aria-labelledby="titulo-apadrina-bunny">
+            <a class="modal__fondo" href="#animales" aria-label="Cerrar"></a>
+            <div class="modal__caja">
+                <a class="modal__cerrar" href="#animales" aria-label="Cerrar">&times;</a>
+                <div class="modal__media">
+                    <img src="img/bunny.jpg" alt="Bunny">
+                    <span class="ficha-animal__tamano">Pequeña &middot; 8 meses</span>
+                </div>
+                <div class="modal__contenido">
+                    <span class="eyebrow eyebrow-verde">Apadriná a</span>
+                    <h2 id="titulo-apadrina-bunny">Bunny</h2>
+                    <p class="modal__tipo">Conejo enano</p>
+                    <p>Al apadrinarlo cubrís su alimentación, atención veterinaria y cuidados mensuales mientras espera un hogar. Cualquier monto ayuda.</p>
+                    <h3>Datos bancarios</h3>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Mercado Pago (CVU)</span>
+                            <span class="dato-bancario__numero">0000003100012345678901</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Banco Nación (CBU)</span>
+                            <span class="dato-bancario__numero">0110012340001234567890</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <div class="dato-bancario">
+                        <div>
+                            <span class="dato-bancario__etiqueta">Banco Galicia (CBU)</span>
+                            <span class="dato-bancario__numero">0070108330004034551800</span>
+                            <span class="dato-bancario__titular">Asociación Zaguates Argentina</span>
+                        </div>
+                        <button class="dato-bancario__copiar" type="button" aria-label="Copiar número">&#128203;</button>
+                    </div>
+                    <h3>Otras formas de donar</h3>
+                    <a class="btn-bloque btn-mp" href="#">&#8599; Pagar con Mercado Pago</a>
+                    <a class="btn-bloque btn-wsp" href="#">&#128172; Unirte al grupo de WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>
